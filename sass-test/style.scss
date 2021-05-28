@@ -1,0 +1,16 @@
+$primary-color:red !default;
+$secondary-color:pink;
+$square-height:120;
+$square-width:240;
+
+.square{
+    background-color: $primary-color;
+    width: $square-width;
+    height: $square-height;
+}
+
+$mobile:(
+    max-width: 600px);
+@media $mobile {
+    $secondary-color;   
+};
