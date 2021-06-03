@@ -1,0 +1,28 @@
+$light :#eee(167, 7, 7);
+$dark:#333;
+
+@mixin theme($light-theme){
+    @if($light-theme==modedark){
+        color: $dark;
+        background-color: $light;
+    }
+    @elseif($light-theme==modeblue){
+        color:yellow;
+        background-color:blue;
+    }
+    @else{
+        color: $light;
+        background-color: $dark;
+    }
+}
+
+body{
+    @include theme($light-theme:true);
+
+   body span{
+        @include theme ($light-theme:false);
+    }
+}
+.mode{
+    @include theme();
+}    
